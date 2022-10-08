@@ -1,7 +1,7 @@
 import './App.css'
 import { Topo } from './Topo'
 import { Noticia} from './Noticia'
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import { listarNoticias } from './server'
 
 
@@ -19,7 +19,7 @@ function App() {
       <h1>SCT Noticias</h1>
       <Topo/>
       <main>
-        {noticias.map(noticia=><Noticia noticia={noticia} />)}
+        {noticias.map(noticia=><Noticia noticia={noticia}/>)}
       </main>
     </div>
   )
