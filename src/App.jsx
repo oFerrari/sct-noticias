@@ -1,22 +1,25 @@
 import './App.css'
 import { Topo } from './Topo'
 import { Noticia} from './Noticia'
+import { useEffect } from 'react'
+import { listarNoticias } from './server'
 
 
 
 function App() {
-  
+    const [noticias,setNoticias] = useState([])
+    useEffect(function(){
+      listarNoticias().then(function(noticias){
+        setNoticias(noticias)
+      })
+    }, [])
 
   return (
     <div className="App">
       <h1>SCT Noticias</h1>
       <Topo/>
       <main>
-        <Noticia titulo="Noticia 01"/>
-        <Noticia titulo="Noticia 02"/>
-        <Noticia titulo="Noticia 03"/>
-        <Noticia titulo="Noticia 04"/>
-        <Noticia titulo="Noticia 05"/>
+        {noticias.map(noticia=><Noticia noticia={noticia} />)}
       </main>
     </div>
   )
