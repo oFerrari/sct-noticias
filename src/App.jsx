@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <h1>SCT Noticias</h1>
     </div>
   )
 }
