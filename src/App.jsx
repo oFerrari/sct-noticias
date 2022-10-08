@@ -1,6 +1,6 @@
 import './App.css'
 import { Topo } from './Topo'
-import { Topo } from './Noticia'
+import { Noticia} from './Noticia'
 
 
 
@@ -11,6 +11,9 @@ function App() {
     <div className="App">
       <h1>SCT Noticias</h1>
       <Topo/>
+      <main>
+        <Noticia/>
+      </main>
     </div>
   )
 }
