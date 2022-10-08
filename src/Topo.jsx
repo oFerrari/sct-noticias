@@ -1,4 +1,5 @@
 import logo from './assets/logo-sct.png'
+import './Topo.css';
 
 export function Topo(){
     return(
