@@ -12,6 +12,10 @@ main{
   margin-top: 90px;
   margin-bottom: 90px;
   padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  
 }
 button{
   border: 0;
